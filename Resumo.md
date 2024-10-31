@@ -99,6 +99,15 @@ int main() {
     return 0;
 }
 ```
+```
+**Lembrete**: Se VET é um vetor, então VET e &VET[0] representam o mesmo endereço.
+- podemos acessar o endereço de qualquer elemento do vetor dos seguintes modos: &VET[i] que é equivalente a (VET + i).
+- (VET + i) não representa uma adição aritimétrica normal mas com o endereço do i-ésimo elemento do vetor VET
+(Contando o endereço a partir do endereço inicial VET[0])
+
+- Do mesmo modo que se pode acessar o endereço de cada elemento do vetor por ponteiros, também se pode acessar o valor de cada elemento usando ponteiros.
+- Assim VET[i] é equivalente a *(VET + i). Utilizando o operador conteúdo (*) aplicado ao endereço do i-ésimo elemento do vetor VET.
+```
 
 ## 3. Parâmetros Formais
 **Definição**: Parâmetros formais são as variáveis declaradas entre parênteses na definição de uma função. Eles recebem os valores reais passados para a função durante a chamada.
