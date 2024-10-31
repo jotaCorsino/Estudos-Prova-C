@@ -225,7 +225,7 @@ O cálculo é feito da seguinte forma: Tamanho_Tipo_Variavel x tam1 x tam2
 
 Exemplo:
 ```c
-int x[3][4];
+int Matriz[3][4];
 ```
 
 O tamanho do tipo int é 4 bytes, então o cálculo seria:
