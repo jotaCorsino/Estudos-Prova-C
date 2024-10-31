@@ -88,11 +88,12 @@ Um ponteiro pode ser usado para percorrer um vetor e acessar cada elemento pelo 
 #include <stdio.h>
 
 int main() {
-    int vetor[5] = {1, 2, 3, 4, 5};
+    int vetor[5] = {5, 12, 3, 4, 25};
     int *p = vetor;
 
     for (int i = 0; i < 5; i++) {
-        printf("%d ", *(p + i)); // Saída: 1 2 3 4 5
+        printf("%d ", *(p + i)); // Saída: 5 12 3 4 25
+        // exemplo: se i = 2 ficaria " *(p + 2) ", que é a mesma coisa que p[2], que aponta para a posição [2] do vetor, e por isso retorna 12.
     }
     printf("\n");
     return 0;
@@ -198,6 +199,17 @@ int main() {
     return 0;
 }
 
+```
+### Exemplo 2: Tamanhos de vetores
+Quando se declara uma matriz da seguinte forma:
+```
+Tipo_da_Variavel Matriz[tam1][tam2] .. [tamN];
+
+O Compilador C Calcula o tamanho, em bytes, necessário para armazenar esta matriz.
+O calculo é feito da seguinte forma: Tamanho_Tipo_Variavel x tam1 x tam2
+
+Exemplo: int x[3][4];
+Tamanho do tipo int é 4 bytes, então o calculo seria: 4 x 3 x 4 = 48 bytes.
 ```
 
 ## 6. Variável Global
