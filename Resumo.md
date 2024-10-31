@@ -261,19 +261,35 @@ int main() {
 
 ### Exemplo 1: Declarar uma função antes ou depois da main muda a necessidade de um protótipo. Se uma função é declarada antes da main, ela pode ser usada diretamente; se depois, um protótipo é necessário.
 
+(declarando a função depois da main())
 ```c
 #include <stdio.h>
 
 void saudacao();  // Protótipo da função
 
 int main() {
-    saudacao(); // Saída: Olá, mundo!
+    saudacao(); // chamada/Saída: Olá, mundo!
     return 0;
 }
 
-void saudacao() {
+void saudacao() { // função
     printf("Olá, mundo!\n");
 }
+```
+
+(declarando antes da main())
+```c
+#include <stdio.h>
+
+void saudacao() { // função
+    printf("Olá, mundo!\n");
+}
+
+int main() {
+    saudacao(); // chamada/Saída: Olá, mundo!
+    return 0;
+}
+
 ```
 
 ## 9. Função Separada em Arquivo
