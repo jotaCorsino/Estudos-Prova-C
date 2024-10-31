@@ -93,7 +93,7 @@ int main() {
 
     for (int i = 0; i < 5; i++) {
         printf("%d ", *(p + i)); // Saída: 5 12 3 4 25
-        // exemplo: se i = 2 ficaria *(p + 2), que é a mesma coisa que p[2], que aponta para a posição [2] do vetor, e por isso retorna 12.
+        // exemplo: se i = 2 ficaria *(p + 2), que é a mesma coisa que p[2], que aponta para a posição [2] do vetor, e por isso retorna 3.
     }
     printf("\n");
     return 0;
