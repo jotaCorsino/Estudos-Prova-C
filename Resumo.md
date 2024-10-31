@@ -216,13 +216,18 @@ Quando se declara uma matriz da seguinte forma:
 ```c
 Tipo_da_Variavel Matriz[tam1][tam2] .. [tamN];
 ```
+
 O compilador C calcula o tamanho, em bytes, necessário para armazenar esta matriz.
+
+```c
 O cálculo é feito da seguinte forma: Tamanho_Tipo_Variavel x tam1 x tam2
+```
 
 Exemplo:
 ```c
 int x[3][4];
 ```
+
 O tamanho do tipo int é 4 bytes, então o cálculo seria:
 
 ```c
