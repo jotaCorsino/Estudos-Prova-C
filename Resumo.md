@@ -93,21 +93,21 @@ int main() {
 
     for (int i = 0; i < 5; i++) {
         printf("%d ", *(p + i)); // Saída: 5 12 3 4 25
-        // exemplo: se i = 2 ficaria " *(p + 2) ", que é a mesma coisa que p[2], que aponta para a posição [2] do vetor, e por isso retorna 12.
+        // exemplo: se i = 2 ficaria *(p + 2), que é a mesma coisa que p[2], que aponta para a posição [2] do vetor, e por isso retorna 12.
     }
     printf("\n");
     return 0;
 }
 ```
-```
-**Lembrete**: Se VET é um vetor, então VET e &VET[0] representam o mesmo endereço.
-- podemos acessar o endereço de qualquer elemento do vetor dos seguintes modos: &VET[i] que é equivalente a (VET + i).
-- (VET + i) não representa uma adição aritimétrica normal mas com o endereço do i-ésimo elemento do vetor VET
-(Contando o endereço a partir do endereço inicial VET[0])
+**Lembrete**: Se `VET` é um vetor, então `VET` e `&VET[0]` representam o mesmo endereço.
 
-- Do mesmo modo que se pode acessar o endereço de cada elemento do vetor por ponteiros, também se pode acessar o valor de cada elemento usando ponteiros.
-- Assim VET[i] é equivalente a *(VET + i). Utilizando o operador conteúdo (*) aplicado ao endereço do i-ésimo elemento do vetor VET.
-```
+- Podemos acessar o endereço de qualquer elemento do vetor dos seguintes modos: `&VET[i]`, que é equivalente a `(VET + i)`.
+- `(VET + i)` não representa uma adição aritmética normal, mas sim o endereço do i-ésimo elemento do vetor `VET`
+  (contando o endereço a partir do endereço inicial `VET[0]`).
+
+- Da mesma forma que se pode acessar o endereço de cada elemento do vetor por ponteiros, também se pode acessar o valor de cada elemento usando ponteiros.
+- Assim, `VET[i]` é equivalente a `*(VET + i)`, utilizando o operador de conteúdo `*` aplicado ao endereço do i-ésimo elemento do vetor `VET`.
+
 
 ## 3. Parâmetros Formais
 **Definição**: Parâmetros formais são as variáveis declaradas entre parênteses na definição de uma função. Eles recebem os valores reais passados para a função durante a chamada.
@@ -210,16 +210,25 @@ int main() {
 
 ```
 ### Exemplo 2: Tamanhos de vetores
+
 Quando se declara uma matriz da seguinte forma:
-```
+
+```c
 Tipo_da_Variavel Matriz[tam1][tam2] .. [tamN];
-
-O Compilador C Calcula o tamanho, em bytes, necessário para armazenar esta matriz.
-O calculo é feito da seguinte forma: Tamanho_Tipo_Variavel x tam1 x tam2
-
-Exemplo: int x[3][4];
-Tamanho do tipo int é 4 bytes, então o calculo seria: 4 x 3 x 4 = 48 bytes.
 ```
+O compilador C calcula o tamanho, em bytes, necessário para armazenar esta matriz.
+O cálculo é feito da seguinte forma: Tamanho_Tipo_Variavel x tam1 x tam2
+
+Exemplo:
+```c
+int x[3][4];
+```
+O tamanho do tipo int é 4 bytes, então o cálculo seria:
+
+```c
+4 x 3 x 4 = 48 bytes
+```
+
 
 ## 6. Variável Global
 **Definição**: Variáveis globais são declaradas fora de qualquer função e podem ser acessadas por qualquer função do programa. Elas são úteis quando várias funções precisam compartilhar uma mesma informação.
